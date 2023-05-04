@@ -1,4 +1,4 @@
-{% set version = '0.2.1' %}
+{% set version = "0.2.2" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,10 +10,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/pedquant_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/pedquant/pedquant_{{ version }}.tar.gz
-  sha256: 663262b255a3aa80b97a70f2685ce7e0153710ed827f333feba867eeb54de24d
+  sha256: 4bfe7984c0c90673d2710e59e5191b398804f5731ab1de6e34750f9a097c513d
 
 build:
-  merge_build_host: True  # [win]
+  merge_build_host: true  # [win]
   number: 0
   noarch: generic
   rpaths:
@@ -65,13 +65,11 @@ test:
 about:
   home: https://github.com/ShichenXie/pedquant
   license: GPL-3.0-only
-  summary: Provides an interface to access public economic and financial data for economic research
-    and quantitative analysis. The data sources including NBS, FRED, 163, Sina, Eastmoney
-    and etc. It also provides quantitative functions for trading strategies based on
-    the 'data.table', 'TTR', 'PerformanceAnalytics' and etc packages.
+  summary: Provides an interface to access public economic and financial data for economic research and quantitative analysis. The data sources including NBS, FRED, 163, Sina, Eastmoney and etc. It also provides quantitative functions for trading strategies based on the 'data.table', 'TTR', 'PerformanceAnalytics' and etc
+    packages.
   license_family: GPL3
   license_file:
-    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
 
 extra:
   recipe-maintainers:
