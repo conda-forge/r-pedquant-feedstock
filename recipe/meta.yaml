@@ -1,4 +1,4 @@
-{% set version = "0.2.2.1" %}
+{% set version = "0.2.3" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/pedquant_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/pedquant/pedquant_{{ version }}.tar.gz
-  sha256: f3d09cb11e70610c90a94cc6e74e580e09e15a03c38e2739d848f1c18f4feaac
+  sha256: f4a629432e91c3136abdc1ce8ecae779c314f5d0634f2c74dcd5757338611fb7
 
 build:
   merge_build_host: true  # [win]
-  number: 1
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
