@@ -1,4 +1,4 @@
-{% set version = "0.2.5" %}
+{% set version = "0.2.6" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/pedquant_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/pedquant/pedquant_{{ version }}.tar.gz
-  sha256: dc6405b4a150d8def674dce17ee821e997c2b64cc5a5f4850bfc4b49ff4eab67
+  sha256: 97cce7b95e13fc86f6c9ee3513d8609926d9faf7fecdb265268ad38d6d42622e
 
 build:
-  number: 1
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
